@@ -29,7 +29,7 @@ An backend app written in Golang for election-commission to store list of candid
 Right-click on [Makefile](./Makefile) and choose Run.
 
 ## How to access application... 
-
+..
 Pattern: http://$namespace.$serviceName.$clusterPublicIP.nip.io....
 
 Voter: [default.voter.10.10.0.10.nip.io](http://default.voter.10.10.0.10.nip.io)
