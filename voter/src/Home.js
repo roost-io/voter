@@ -39,6 +39,10 @@ class Home extends Component {
     console.log('EC server endpoint:', ${ec_server_endpoint})
     fetch(`http://${ec_server_endpoint}`, {
       method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
+      },
     })
       .then((response) => response.json())
       .then((response) => {
