@@ -10,6 +10,9 @@ clusterIP: 10.10.0.10
 clusterDomain: nip.io
 registry: &defaultRegistry local-registry:5002
 
+ballot_endpoint: ""
+ecserver_endpoint: ""
+
 services:
   voter: 
     imageName: voter # without registry-host and tag
