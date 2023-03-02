@@ -36,6 +36,7 @@ class Home extends Component {
   componentDidMount() {
     let r = Math.random().toString(36).substring(7);
     this.setState({ voter_id: r });
+    console.log('EC server endpoint:', ${ec_server_endpoint})
     fetch(`http://${ec_server_endpoint}`, {
       method: 'GET',
     })
@@ -45,7 +46,7 @@ class Home extends Component {
       })
       .catch((error) => {
         console.error(
-          'ballot service is not reachable at http://' + ec_server_endpoint
+          'ballot service is not reachable at http://' + ${ec_server_endpoint}
         );
       });
   }
