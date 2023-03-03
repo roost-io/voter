@@ -1,5 +1,5 @@
 apiVersion: v2
-name: vote
+name: voter
 description: Installs voting app
 
 # A chart can be either an 'application' or a 'library' chart.

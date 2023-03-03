@@ -2,7 +2,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   annotations:
-  name: voting-app
+  name: voting-voter
   namespace: {{ .Values.namespace }}
 spec:
   ingressClassName: nginx 
