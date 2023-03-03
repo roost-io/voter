@@ -17,33 +17,3 @@ spec:
             name: {{ .Values.services.voter.serviceName }}
             port:
               number: 80
-  - host: "{{ .Values.namespace }}.{{ .Values.services.ballot.serviceName }}.{{ .Values.clusterIP }}.{{ .Values.clusterDomain }}"
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: {{ .Values.services.ballot.serviceName }}
-            port:
-              number: 80
-  - host: "{{ .Values.namespace }}.{{ .Values.services.ecserver.serviceName }}.{{ .Values.clusterIP }}.{{ .Values.clusterDomain }}"
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: {{ .Values.services.ecserver.serviceName }}
-            port:
-              number: 80
-  - host: "{{ .Values.namespace }}.{{ .Values.services.electionCommission.serviceName }}.{{ .Values.clusterIP }}.{{ .Values.clusterDomain }}"
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: {{ .Values.services.electionCommission.serviceName }}
-            port:
-              number: 80
